@@ -1,5 +1,5 @@
 const printBoard = (board) => {
-  console.log("Here's the current board");
+  console.log("Here's the current board:");
 
   board.forEach(row =>{
       console.log(row[0] + row[1] + row[2]);
