@@ -41,7 +41,7 @@ test('Draw game', () => {
 test('Game is not completed', () => {
   const board = [
     ['x','o','x'],
-    ['x','','o'],
+    ['x','.','o'],
     ['o','x','o']
 ];
   

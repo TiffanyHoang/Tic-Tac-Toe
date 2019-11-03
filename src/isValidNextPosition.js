@@ -2,8 +2,8 @@ const isValidNesxtPosition = (board, position) => {
   // CHECK VALID INPUT
   // not valid input 
   const positionArray = position.split(',').map(Number);
-  const positionRow = positionArray[0];
-  const positionColumn = positionArray[1];
+  const positionRow = positionArray[0] - 1;
+  const positionColumn = positionArray[1] - 1;
 
   if (positionArray.length !== 2 || isNaN(positionRow) || isNaN(positionColumn)){
     return false;
@@ -20,9 +20,9 @@ const isValidNesxtPosition = (board, position) => {
   }
 
   // the cell is not empty
-  const selectedCell = board[positionRow][positionColumn]
-  if(selectedCell !== ''){
-    return false
+  const selectedCell = board[positionRow][positionColumn];
+  if(selectedCell !== '.'){
+    return false;
   }
 
   return true;

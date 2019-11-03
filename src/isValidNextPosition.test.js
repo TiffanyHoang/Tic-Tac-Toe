@@ -1,7 +1,7 @@
 const isValidNextPosition = require('./isValidNextPosition'); 
 
 test('returns false when invalid input (2 numbers separated by comma)', () => {
-  const board = [['']];
+  const board = [['.']];
   const position = '123';
   
   const actual = isValidNextPosition(board, position); 
@@ -11,7 +11,7 @@ test('returns false when invalid input (2 numbers separated by comma)', () => {
 });
 
 test('returns false when invalid input (2 numbers separated by comma)', () => {
-  const board = [['']];
+  const board = [['.']];
   const position = '3-4';
   
   const actual = isValidNextPosition(board, position); 
@@ -21,7 +21,7 @@ test('returns false when invalid input (2 numbers separated by comma)', () => {
 });
 
 test('returns false when invalid input (2 numbers separated by comma)', () => {
-  const board = [['']];
+  const board = [['.']];
   const position = 'a,a';
   
   const actual = isValidNextPosition(board, position); 
@@ -32,7 +32,7 @@ test('returns false when invalid input (2 numbers separated by comma)', () => {
 
 
 test('returns false when invalid row', () => {
-  const board = [['']];
+  const board = [['.']];
   const position = '1,1';
   
   const actual = isValidNextPosition(board, position); 
@@ -43,7 +43,7 @@ test('returns false when invalid row', () => {
 
 
 test('returns false when invalid column', () => {
-  const board = [['','','']];
+  const board = [['.','.','.']];
   const position = '0,3';
   
   const actual = isValidNextPosition(board, position); 
@@ -53,7 +53,7 @@ test('returns false when invalid column', () => {
 });
 
 test('returns false when it is not empty', () => {
-  const board = [['a','','']];
+  const board = [['a','.','.']];
   const position = '0,3';
   
   const actual = isValidNextPosition(board, position); 
@@ -63,7 +63,7 @@ test('returns false when it is not empty', () => {
 });
 
 test('returns true when valid input', () => {
-  const board = [['']];
+  const board = [['.']];
   const position = '0,0';
 
   const actual = isValidNextPosition(board, position); 

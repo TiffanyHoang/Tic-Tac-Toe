@@ -1,12 +1,12 @@
 const printResult = (result) => {
   if (result === 'x'){
-    console.log("Congratulations! X wons the game.")
+    console.log("Congratulations! x wons the game.");
   }
   if (result === 'o'){
-    console.log("Congratulations! O wons the game.")
+    console.log("Congratulations! o wons the game.");
   }
   if (result === 'd'){
-    console.log("Draw!")
+    console.log("Draw!");
   }
 }
 module.exports = printResult;

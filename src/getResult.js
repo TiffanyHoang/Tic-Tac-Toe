@@ -12,38 +12,37 @@ const getResult = (board) => {
 
   // check if x wins
   const xWin = (value) => {
-    return value === 'xxx'
+    return value === 'xxx';
   }
 
   if (winningCases.some(xWin)) {
-    return 'x'
+    return 'x';
   }
   
   // check if o wins
   const oWin = (value) => {
-    return value === 'ooo'
+    return value === 'ooo';
   }
 
   if (winningCases.some(oWin)) {
-    return 'o'
+    return 'o';
   }
 
 
   // check if draw
   const cellFilled = cell => {
-    return cell !== ''
+    return cell !== '.';
   }
 
   const rowFilled = row => { 
-    return row.every(cellFilled)
+    return row.every(cellFilled);
   }
   
   if (board.every(rowFilled)) {
-    return 'd'
+    return 'd';
   }
  
-  return 'i'
-
+  return 'i';
 }
 
 module.exports = getResult;
