@@ -17,11 +17,14 @@ let board = [
   ['.','.','.']
 ]
 let result;
+const printInstruction = (mark) => {
+  console.log(`Player ${mark} enter a coord x,y to place your mark or enter 'q' to give up.`);
+};
 let mark = isXturn ? 'x':'o';
 
-console.log("Welcome to Tictactoe Game.");
+console.log("Welcome to Tic Tac Toe Game.");
 printBoard(board);
-console.log(`Player ${mark} enter a coord x,y to place your mark or enter 'q' to give up.`);
+printInstruction(mark);
 
 // When user input data and click enter key
 standardInput.on('data', (data) => {
@@ -41,7 +44,7 @@ standardInput.on('data', (data) => {
       isXturn = !isXturn;
       mark = isXturn ? 'x':'o';
       printBoard(board);
-      console.log(`Player ${mark} enter a coord x,y to place your mark or enter 'q' to give up.`);
+      printInstruction(mark);
       return;
     }
 
@@ -50,5 +53,5 @@ standardInput.on('data', (data) => {
   }
 
   console.log("Oh no, this is not a valid spot! Try again...");
-  console.log(`Player ${mark} enter a coord x,y to place your mark or enter 'q' to give up.`);
+  printInstruction(mark);
 })
