@@ -33,7 +33,7 @@ test('returns false when invalid input (2 numbers separated by comma)', () => {
 
 test('returns false when invalid row', () => {
   const board = [['.']];
-  const position = '1,1';
+  const position = '2,2';
   
   const actual = isValidNextPosition(board, position); 
   const expected = false;
@@ -44,7 +44,7 @@ test('returns false when invalid row', () => {
 
 test('returns false when invalid column', () => {
   const board = [['.','.','.']];
-  const position = '0,3';
+  const position = '1,4';
   
   const actual = isValidNextPosition(board, position); 
   const expected = false;
@@ -54,7 +54,7 @@ test('returns false when invalid column', () => {
 
 test('returns false when it is not empty', () => {
   const board = [['a','.','.']];
-  const position = '0,3';
+  const position = '1,1';
   
   const actual = isValidNextPosition(board, position); 
   const expected = false;
@@ -64,7 +64,7 @@ test('returns false when it is not empty', () => {
 
 test('returns true when valid input', () => {
   const board = [['.']];
-  const position = '0,0';
+  const position = '1,1';
 
   const actual = isValidNextPosition(board, position); 
   const expected = true;

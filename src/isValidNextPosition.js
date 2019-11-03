@@ -1,4 +1,4 @@
-const isValidNesxtPosition = (board, position) => { 
+const isValidNextPosition = (board, position) => { 
   // CHECK VALID INPUT
   // not valid input 
   const positionArray = position.split(',').map(Number);
@@ -12,10 +12,10 @@ const isValidNesxtPosition = (board, position) => {
   // not in the board row & column
   const boardHeight = board.length;
   const boardWidth = board[0].length;
-  if (positionRow > boardHeight || positionRow === boardHeight) {
+  if (positionRow < 0 || positionRow >= boardHeight) {
     return false;
   } 
-  if (positionColumn > boardWidth || positionColumn === boardWidth) {
+  if (positionColumn < 0 || positionColumn >= boardWidth) {
     return false;
   }
 
@@ -28,4 +28,4 @@ const isValidNesxtPosition = (board, position) => {
   return true;
 };
 
-module.exports = isValidNesxtPosition;
+module.exports = isValidNextPosition;
