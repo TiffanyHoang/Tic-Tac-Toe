@@ -41,10 +41,29 @@ test('returns false when invalid row', () => {
   expect(actual).toBe(expected);
 });
 
+test('returns false when invalid row', () => {
+  const board = [['.']];
+  const position = '-1,2';
+  
+  const actual = isValidNextPosition(board, position); 
+  const expected = false;
+
+  expect(actual).toBe(expected);
+});
 
 test('returns false when invalid column', () => {
   const board = [['.','.','.']];
   const position = '1,4';
+  
+  const actual = isValidNextPosition(board, position); 
+  const expected = false;
+
+  expect(actual).toBe(expected);
+});
+
+test('returns false when invalid column', () => {
+  const board = [['.','.','.']];
+  const position = '1,-1';
   
   const actual = isValidNextPosition(board, position); 
   const expected = false;
