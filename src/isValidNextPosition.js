@@ -6,7 +6,6 @@ const isValidNesxtPosition = (board, position) => {
   const positionColumn = positionArray[1];
 
   if (positionArray.length !== 2 || isNaN(positionRow) || isNaN(positionColumn)){
-    console.log('not valid input');
     return false;
   }
 
@@ -14,11 +13,9 @@ const isValidNesxtPosition = (board, position) => {
   const boardHeight = board.length;
   const boardWidth = board[0].length;
   if (positionRow > boardHeight || positionRow === boardHeight) {
-    console.log('not in the board - row');
     return false;
   } 
   if (positionColumn > boardWidth || positionColumn === boardWidth) {
-    console.log('not in the board - col');
     return false;
   }
 
